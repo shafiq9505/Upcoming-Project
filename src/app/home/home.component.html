@@ -1,6 +1,8 @@
 <h1>Rumah</h1>
-<button (click)="firstclick()" class="button">Just click</button>
 
-
-<p draggable="true" (drag) = testToDrag()>{{dragData}}</p>
-
+<ul *ngIf="users">
+    <li *ngFor="let user of users.data">
+      <img [src]="user.avatar">
+      <p>{{ user.first_name }} {{ user.last_name }}</p>
+    </li>
+  </ul>
